@@ -1,14 +1,12 @@
-node('built-in') 
+node('master') 
 {
-    stage('Continuous Download_loans') 
-	{
-    git 'https://github.com/sunildevops77/maven.git'
-	}
-    stage('Continuous Build_loans') 
-	{
-    sh label: '', script: 'mvn package'
-	}
-    stage('Continuous Deployment') 
-		}
-
+    stage('Cont_download_loans') 
+    {
+       git 'https://github.com/selenium-saikrishna/maven.git'
+    }
+    stage('Cont_build_loans') 
+    {
+       sh label: '', script: 'mvn package'
+    }
+    }
 
